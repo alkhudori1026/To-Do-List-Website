@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dompetku</title>
+</head>
+
+<body>
+    <!--header-->
+    <header class="b-ungu-1">
+        <img src="logo dompetku.png" alt="Dompetku" title="fuluss">
+        <h2>Dompetku</h2>
+    </header>
+    <!--dashboard dan kotak form laporan-->
+    <section id="baris-1">
+        <!--kotak form-->
+        <div id="kotak-form">
+            <div class="judul-ds">
+                <h4 class="teks-judul-ds">Laporan Hari Ini</h4>
+                <button id="btn-simpan">Simpan</button>
+            </div>
+            <div id="input">
+                <input type="text" name="" id="nm-tran" class="kotak-input b-ungu" placeholder="Nama transaksi">
+                <input type="text" name="" id="desc-keperluan" class="kotak-input b-ungu"
+                    placeholder="Deskripsi keperluan">
+                <div id="gap-tran">
+                    <input type="number" name="" id="nominal" class="kotak-input b-ungu" placeholder="Nominal">
+                    <select name="" id="jenis-tran" class="kotak-input b-ungu-2">
+                        <option value="">Jenis transaksi</option>
+                        <option value="pemasukan">Pemasukan</option>
+                        <option value="pengeluaran">Pengeluaran</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--dashboard statistik keuangan-->
+        <div id="kotak-statistik">
+            <div class="judul-ds">
+                <h4 class="teks-judul-ds">Statistik Keuangan</h4>
+            </div>
+            <div id="statistik">
+                <!--tempat menampilkan saldo-->
+                <div class="stat-group">
+                    <p class="teks-kecil">Saldo saat ini:</p>
+                    <div class="kotak-input b-ungu-2">
+                        <p id="saldo" class="nominal">Rp 0</p>
+                    </div>
+                </div>
+                <div class="stat-group">
+                    <!--tempat menampilkan total pemasukan-->
+                    <p class="teks-kecil">Total pemasukan:</p>
+                    <div class="kotak-input b-hijau-2">
+                        <p id="pemasukan" class="nominal">Rp 0</p>
+                    </div>
+                </div>
+                <div class="stat-group">
+                    <!--tempat menampilkan total pengeluaran-->
+                    <p class="teks-kecil ">Total pengeluaran:</p>
+                    <div class="kotak-input b-oren-2">
+                        <p id="pengeluaran" class="nominal">Rp 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Daftar riwayat pemasukan dan pengeluaran-->
+    <section id="baris-2">
+        <div class="judul-ds">
+            <h4 class="teks-judul-ds">Daftar Riwayat Transaksi</h4>
+        </div>
+        <div id="riwayat">
+            <!--Kotak riwayat pemasukan-->
+            <div class="jenis-tran">
+                <div class="judul-rw b-pemasukan">
+                    <h4 class="teks-judul-ds">Pemasukan</h4>
+                </div>
+                <div id="kotak-pemasukan">
+                    <div class="riw-default" id="riw-pemasukan">
+                        <p class="teks-kecil">Belum ada riwayat transaksi</p>
+                    </div>
+                </div>
+            </div>
+            <!--Kotak riwayat pengeluaran-->
+            <div class="jenis-tran">
+                <div class="judul-rw b-pengeluaran">
+                    <h4 class="teks-judul-ds">Pengeluaran</h4>
+                </div>
+                <div id="kotak-pengeluaran">
+                    <div class="riw-default" id="riw-pengeluaran">
+                        <p class="teks-kecil">Belum ada riwayat transaksi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Catatan Uang Jajan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h3 class="judul">Catatan Uang Jajan</h3>
+        
+        <div class="form-input">
+            <input type="text" id="nama-jajan" class="form-control" placeholder="Beli apa hari ini?">
+            <input type="number" id="harga-jajan" class="form-control" placeholder="Berapa harganya?">
+            <input type="number" id="quantity" class="form-control" placeholder="jumlah qty">
+            <button id="btn-tambah">Catat!</button>
+        </div>
+
+        <div class="ringkasan">
+            <p>Total Pengeluaran: Rp <span id="total-pengeluaran">0</span></p>
+        </div>
+
+        <!-- Daftar jajan akan masuk ke dalam div ini -->
+        <div id="list-pengeluaran"></div>
+    </div>
+</body>
+</html>

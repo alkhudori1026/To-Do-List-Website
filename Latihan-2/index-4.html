@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Go</title>
+    <link rel="stylesheet" href="todo-4.css">
+    <script src="script-4.js" defer></script>
+</head>
+<body>
+    <!-- Alert Box -->
+    <div id="custom-modal" class="modal-hidden">
+        <div class="modal-content">
+            <h4>⚠️ Peringatan</h4>
+            <p id="modal-message">Pesan error akan muncul di sini.</p>
+            <button id="btn-close-modal">Paham</button>
+        </div>
+    </div>
+    <!-- Header Productivity Go -->
+    <header class="top-nav">
+        <h2>Productivity Go</h2>
+        <p>Manajemen Tugas Metode 1-3-5</p>
+    </header>
+    <!--Kotak Formulir untuk menulis tugas baru-->
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="form-card">
+                <div class="title-card">
+                    <h4>Tambahkan Tugas</h4>
+                    <button id="btn-add" class="btn-plus">+</button>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="input-title" placeholder="Judul tugas...">
+                    <input type="text" id="input-desc" placeholder="Deskripsi singkat...">
+                    <select id="input-priority">
+                        <option value="utama">Utama (Maks 1)</option>
+                        <option value="sedang">Sedang (Maks 3)</option>
+                        <option value="kecil">Kecil (Maks 5)</option>
+                    </select>
+                    <input type="text" id="input-deadline" placeholder="Deadline (opsional)">
+                </div>
+            </div>
+        </aside>
+        <!--Kotak untuk tempat tugas-->
+        <main class="board">
+            <div class="task-todo">
+                <!--kotak tugas belum dikerjakan-->
+                <div class="category-header bg-belum">
+                    <h5>> Daftar Tugas</h5>
+                </div>
+                <div class="board-top">
+                    <!--kotak tugas utama-->
+                    <section class="task-category">
+                        <div class="category-header bg-utama">
+                            <h5>🔥 Tugas Utama</h5>
+                            <p id="count-utama">0/1</p> 
+                        </div>
+                        <div id="list-utama" class="task-list"></div>
+                    </section>
+                    <!--kotak tugas sedang-->
+                    <section class="task-category">
+                        <div class="category-header bg-sedang">
+                            <h5>⭐ Tugas Sedang</h5>
+                            <p id="count-sedang">0/3</p>
+                        </div>
+                        <div id="list-sedang" class="task-list"></div>
+                    </section>
+                    <!--kotak tugas kecil-->
+                    <section class="task-category">
+                        <div class="category-header bg-kecil">
+                            <h5>📌 Tugas Kecil</h5>
+                            <p id="count-kecil">0/5</p>
+                        </div>
+                        <div id="list-kecil" class="task-list"></div>
+                    </section>
+                </div>
+            </div>
+            <!--kotak tugas selesai-->
+            <section class="task-category category-selesai">
+                <div class="category-header bg-selesai">
+                    <h5>✅ Tugas Selesai</h5>
+                    <button id="btn-clear" class="btn-clear bg-clear">Clear</button>
+                </div>
+                <div id="list-selesai" class="task-list board-top"></div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

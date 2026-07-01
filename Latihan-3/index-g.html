@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Kas Mini</title>
+    <link rel="stylesheet" href="style-g.css">
+</head>
+<body>
+    
+    <div class="wadah-utama">
+        <!-- BAGIAN 1: FORM INPUT -->
+        <div class="kotak-form">
+            <h3>Catat Transaksi</h3>
+            <input type="text" id="nm-tran" placeholder="Nama Transaksi">
+            <input type="text" id="desc-keperluan" placeholder="Keterangan Tambahan">
+            <input type="number" id="nominal" placeholder="Nominal">
+            <select id="jenis-tran">
+                <option value="" disabled selected>Pilih Jenis Transaksi</option>
+                <option value="pemasukan">Pemasukan</option>
+                <option value="pengeluaran">Pengeluaran</option>
+            </select>
+            <button id="btn-simpan">Simpan Transaksi</button>
+        </div>
+
+        <!-- BAGIAN 2: STATISTIK -->
+        <div class="kotak-statistik">
+            <h3>Sisa Uang Jajan</h3>
+            <h2 id="saldo">Rp 0</h2>
+            <div class="detail-statistik">
+                <div>Pemasukan: <span id="pemasukan">+ Rp 0</span></div>
+                <div>Pengeluaran: <span id="pengeluaran">- Rp 0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BAGIAN 3: RIWAYAT GANDA (DIPISAH) -->
+    <div class="wadah-riwayat-ganda">
+        
+        <!-- Kolom Khusus Pemasukan -->
+        <div class="kolom-riwayat" id="kotak-pemasukan">
+            <h3 class="judul-kolom-pemasukan">Riwayat Pemasukan</h3>
+            <div id="isi-pemasukan">
+                <!-- Teks default yang dulu kamu buat -->
+                <p id="riw-pemasukan" class="teks-default">Belum ada pemasukan.</p>
+            </div>
+        </div>
+
+        <!-- Kolom Khusus Pengeluaran -->
+        <div class="kolom-riwayat" id="kotak-pengeluaran">
+            <h3 class="judul-kolom-pengeluaran">Riwayat Pengeluaran</h3>
+            <div id="isi-pengeluaran">
+                <!-- Teks default yang dulu kamu buat -->
+                <p id="riw-pengeluaran" class="teks-default">Belum ada pengeluaran.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script-g.js"></script>
+</body>
+</html>

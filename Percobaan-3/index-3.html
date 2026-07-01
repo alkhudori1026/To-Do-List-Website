@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Go</title>
+    <link rel="stylesheet" href="todo.css">
+    <!-- Pastikan script dipanggil dengan defer agar dimuat setelah HTML selesai -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="top-nav">
+        <h2>Productivity Go</h2>
+        <p>Manajemen Tugas Metode 1-3-5</p>
+    </header>
+
+    <!-- Wrapper utama menggunakan skema Dashboard -->
+    <div class="dashboard-container">
+        
+        <!-- SIDEBAR KIRI: Area Form -->
+        <aside class="sidebar">
+            <div class="form-card">
+                <div class="title-card">
+                    <h4>Tambahkan Tugas</h4>
+                    <button id="btn-add" class="btn-plus">+</button>
+                </div>
+                
+                <div class="form-input">
+                    <input type="text" id="input-title" placeholder="Judul tugas...">
+                    <input type="text" id="input-desc" placeholder="Deskripsi singkat...">
+                    
+                    <select id="input-priority">
+                        <option value="utama">Utama (Maks 1)</option>
+                        <option value="sedang">Sedang (Maks 3)</option>
+                        <option value="kecil">Kecil (Maks 5)</option>
+                    </select>
+                    
+                    <input type="text" id="input-deadline" placeholder="Deadline (opsional)">
+                </div>
+            </div>
+        </aside>
+
+        <!-- KONTEN KANAN: Papan Tugas -->
+        <main class="board">
+            
+            <!-- Kategori 1: Utama -->
+            <section class="task-category">
+                <div class="category-header bg-utama">
+                    <h5>🔥 Tugas Utama</h5>
+                    <!-- ID khusus untuk mengubah angka counter -->
+                    <p id="count-utama">0/1</p> 
+                </div>
+                <!-- ID khusus tempat tugas utama akan disuntikkan oleh JS -->
+                <div id="list-utama" class="task-list">
+                    <!-- Kartu tugas akan masuk ke sini -->
+                </div>
+            </section>
+
+            <!-- Kategori 2: Sedang -->
+            <section class="task-category">
+                <div class="category-header bg-sedang">
+                    <h5>⭐ Tugas Sedang</h5>
+                    <p id="count-sedang">0/3</p>
+                </div>
+                <div id="list-sedang" class="task-list"></div>
+            </section>
+
+            <!-- Kategori 3: Kecil -->
+            <section class="task-category">
+                <div class="category-header bg-kecil">
+                    <h5>📌 Tugas Kecil</h5>
+                    <p id="count-kecil">0/5</p>
+                </div>
+                <div id="list-kecil" class="task-list"></div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

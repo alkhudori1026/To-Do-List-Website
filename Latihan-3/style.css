@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    border: 0 none;
+    padding: 0;
+}
+/*kamus untuk warna*/
+:root {
+    --ungu-1 : rgb(83, 49, 92);
+    --ungu-2 : rgb(224, 186, 235);
+
+    --pemasukan : rgb(30, 100, 41);
+    --hijau-2 : rgb(164, 211, 166);
+
+    --pengeluaran : rgb(207, 150, 63);
+    --oren-2 : rgb(233, 206, 166);
+
+    --teks-hitam : rgb(0,0,0);
+    --teks-putih : rgb(249, 243, 252);
+    --teks-muted : rgb(168, 142, 173);
+    --teks-hijau : rgb(0, 49, 7);
+    --teks-oren : rgb(114, 52, 2);
+
+    --b-body : rgb(224, 207, 231);
+    --b-kotak : rgb(255,255,255);
+    --b-kotak-abu : rgb(219, 219, 219);
+}
+/*atur font*/
+body {
+    font-family: Poppins , 'Roboto Mono',sans-serif;
+    background-color: var(--b-body);
+}
+/*atur header*/
+header {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    height: 60px;
+    margin-top: -30px;
+    padding: 30px 0 5px;
+    border-radius: 30px;
+    position: relative;
+}
+header img {
+    margin-left: 20px;
+    scale: 0.7;
+    rotate: 354deg;
+}
+header h2 {
+    font:700 30px 'poppins', sans-serif ;
+    color: var(--teks-putih);
+    position: absolute;
+    bottom: 15px;
+    left: 115px;
+}
+/*atur section baris 1 --- form laporan dan dashboard*/
+#baris-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 10%;
+}
+/*-----atur form laporan------*/
+#kotak-form {
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--b-kotak);
+}
+.judul-ds {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 5px 5px;
+    padding: 10px 15px;
+    background-color: var(--ungu-1);
+}
+.teks-judul-ds {
+    color: var(--teks-putih);
+}
+#btn-simpan {
+    color: var(--ungu-1);
+    background-color: var(--ungu-2);
+    padding: 3px 5px;
+    border-radius: 9px;
+}
+#input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px;
+}
+#jenis-tran { width: 30%;}
+.kotak-input {
+    color: var(--ungu-1);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: var(--ungu-2);
+}
+.kotak-input::placeholder {
+    color: var(--teks-muted);
+    font-style: italic;
+}
+#nominal {width: 60%;}
+#jenis-tran{
+    color: var(--ungu-1);
+    font-style: italic;
+}
+#gap-tran {display: flex; justify-content: space-between; gap: 5px;}
+#jenis-tran option {
+    color: var(--ungu-1);
+}
+#kotak-statistik {
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--b-kotak);
+}
+.teks-kecil{
+    font-size: 14px;
+    color: var(--teks-muted);
+}
+#statistik {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px 15px;
+    gap: 7px;
+    min-width: 100%;
+}
+.stat-group {
+    width: 86%;
+}
+/*atur sction baris 2 --- kotak riwayat*/
+#baris-2 {
+    background-color: var(--b-kotak);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 10px;
+    margin: 0 10% 30px;
+}
+#riwayat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.jenis-tran {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.judul-rw {
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: var(--ungu-1);
+    text-align: center;
+}
+.riw-default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.kotak-riwayat {
+    border-radius: 20px;
+    background-color: var(--b-kotak-abu);
+}
+
+.isi-kotak-riwayat {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 10px;
+}
+
+/*atur warna background*/
+.b-ungu-1 { background-color: var(--ungu-1);}
+.b-ungu-2 { background-color: var(--ungu-2);}
+.b-pemasukan { background-color: var(--pemasukan);}
+.b-hijau-2 { background-color: var(--hijau-2);}
+.b-pengeluaran { background-color: var(--pengeluaran);}
+.b-oren-2 { background-color: var(--oren-2);}
+
+@media (max-width: 600px) {
+    #baris-1 {
+        flex-direction: column;
+    }
+    #nominal {width: 50%;}
+    .teks-judul-ds {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,82 @@
+* { box-sizing: border-box; font-family: sans-serif; }
+body { padding: 20px; background-color: #f9f9f9; }
+
+/* Skala Fleksibel untuk Form dan Statistik di Baris Atas */
+.wadah-utama, .wadah-riwayat-ganda {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+.kotak-form, .kotak-statistik, .kolom-riwayat {
+    flex: 1; /* Membagi ruang sama rata 50:50 */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Form Styling */
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button { background-color: #333; color: white; cursor: pointer; }
+
+/* Statistik Styling */
+.kotak-statistik { text-align: center; }
+.detail-statistik {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-weight: bold;
+}
+#pemasukan { color: #0f5132; } /* Hijau Tua */
+#pengeluaran { color: #cc5500; } /* Oren Tua */
+
+/* Styling Kartu Riwayat (Persis buatan Anais tapi dirapikan) */
+.kotak-riwayat {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+.teks-default { text-align: center; color: gray; font-style: italic; }
+
+.judul-ds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Trik agar judul panjang tidak bikin kotak melar */
+.teks-judul-ds {
+    margin: 0;
+    word-break: break-word; /* Memaksa teks turun kalau kepanjangan */
+    max-width: 70%;
+}
+.tgl-riwayat { font-size: 11px; color: gray; }
+.desc-riwayat { display: block; font-size: 12px; color: #555; margin-top: 4px; }
+
+/* PERMINTAAN WARNA ANAIS: Background & Teks Nominal */
+.nominal-riwayat {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.bg-hijau { background-color: #d1e7dd; color: #0f5132; } /* Hijau 2 & Hijau Tua */
+.bg-oren { background-color: #ffe5d0; color: #cc5500; } /* Oren 2 & Oren Tua */
+
+.aksi-btn { margin-top: 10px; display: flex; gap: 5px; }
+.btn-kecil { padding: 4px 8px; font-size: 11px; width: auto; border: none; border-radius: 3px;}
+.edit { background: #ffc107; color: black; }
+.hapus { background: #dc3545; color: white; }
+
+/* Responsive HP */
+@media (max-width: 700px) {
+    .wadah-utama, .wadah-riwayat-ganda { flex-direction: column; }
+}

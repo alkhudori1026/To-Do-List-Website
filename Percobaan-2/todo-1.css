@@ -1,0 +1,225 @@
+/* =========================================
+   1. ROOT VARIABLES (Ditaruh Paling Atas!)
+   ========================================= */
+:root {
+    /* Brand & Background Colors */
+    --primary-color: #2E7D32;       /* Hijau elegan */
+    --background-body: #F4F6F8;     /* Abu-abu sangat terang */
+    --background-card: #FFFFFF;     /* Putih bersih untuk card */
+    
+    /* Text Colors */
+    --text-main: #1C2833;
+    --text-light: #FFFFFF;
+    --text-muted: #7F8C8D;          /* Abu-abu untuk teks kosong */
+    
+    /* Border & UI Elements */
+    --border-color: #D5DBDB;
+    --btn-color: #2E7D32;
+    
+    /* Task Category Colors */
+    --tugas-utama: #E74C3C;         /* Merah */
+    --tugas-sedang: #F39C12;        /* Oranye */
+    --tugas-kecil: #3498DB;         /* Biru (lebih kalem dari kuning) */
+}
+
+/* =========================================
+   2. GLOBAL RESET & BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-body);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =========================================
+   3. HEADER & DESCRIPTION
+   ========================================= */
+header {
+    width: 100%;
+    padding: 15px 4%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#description {
+    font-size: 1.1rem;
+    padding: 20px 10%;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+/* =========================================
+   4. FORM SECTION
+   ========================================= */
+#todo-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.form-card {
+    background-color: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.title-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.title-card h4 {
+    font-size: 1.3rem;
+}
+
+.btn-plus {
+    font: 900 1.5rem Arial, sans-serif;
+    color: var(--text-light);
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-plus:hover {
+    background-color: #1b4e20;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-input input, 
+.form-options select, 
+.form-options input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+.form-input input:focus, 
+.form-options select:focus, 
+.form-options input:focus {
+    border-color: var(--primary-color);
+}
+
+.form-options {
+    display: flex;
+    gap: 15px;
+}
+
+/* =========================================
+   5. TODO BOARD (KOLOM TUGAS)
+   ========================================= */
+#todo-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Memastikan kedua kolom saat di laptop lebarnya sama rata (50% 50%) */
+.todo-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.heading-column {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* =========================================
+   6. TODO CARDS (KARTU TUGAS INDIVIDUAL)
+   ========================================= */
+.todo-card {
+    background-color: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Biar warna header tidak keluar dari lengkungan border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Menyatukan properti layout header agar tidak diulang-ulang (Prinsip DRY) */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--text-light);
+}
+
+/* Memisahkan warna background spesifik */
+.bg-utama { background-color: var(--tugas-utama); }
+.bg-sedang { background-color: var(--tugas-sedang); }
+.bg-kecil { background-color: var(--tugas-kecil); }
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-body h6 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.deadline {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--tugas-utama);
+    margin-top: 5px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-style: italic;
+}
