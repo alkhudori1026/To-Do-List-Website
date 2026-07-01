@@ -1,5 +1,6 @@
 # To-Do-List Website
 Latihan logika javascript
+<<<<<<< HEAD
 
 # 📚 Catatan Developer: Fondasi Arsitektur HTML & CSS
 
@@ -53,3 +54,6 @@ Tidak perlu langsung menggunakan alat digital. Sketsa kotak-kotak kasar mengguna
 
 > **💡 Insight: Menuju Dunia JavaScript**
 > HTML dan CSS ibarat membangun sebuah **Robot Mainan**. HTML adalah kerangka besinya, dan CSS adalah cat serta bodinya. Robotnya sudah berdiri gagah, tapi belum bisa bergerak. JavaScript (JS) adalah **Mesin dan Otaknya**. Dengan JS, kita merakit sistem saraf agar tombol yang diklik bisa memberikan respons secara *real-time*!
+=======
+tapi awalnya latihan layouting dulu pake css dan html dasar
+>>>>>>> 70fb11d72580fc3b694e75c538b89aef5dadb20c
